@@ -1,4 +1,4 @@
-import { TIconType } from '@web3uikit/icons';
+// import { TIconType } from '@web3uikit/icons';
 import { OptionProps } from '../Select';
 
 export interface IDropdown {
@@ -29,7 +29,7 @@ export interface IDropdown {
     /**
      * Name of the prefix Icon
      */
-    icon?: TIconType;
+    icon?: string; //Icon
     /**
      * Name of the prefix Icon
      */

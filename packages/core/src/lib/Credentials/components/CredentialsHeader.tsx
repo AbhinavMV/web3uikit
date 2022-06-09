@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { color } from '@web3uikit/styles';
-import { Icon } from '@web3uikit/icons';
+// import { Icon } from '@web3uikit/icons';
+import { Plus } from '@web3uikit/icons';
 import { Typography } from '../../Typography';
 import { ICredentialsHeaderProps } from '../types';
 
@@ -24,8 +25,7 @@ const CredentialsHeader: FC<ICredentialsHeaderProps> = ({
     return (
         <HeaderStyled>
             {icon && (
-                <Icon
-                    svg={icon}
+                <Plus
                     fill={`${iconColor}`}
                     size={iconSize}
                     data-testid="cred-test-header-icon"

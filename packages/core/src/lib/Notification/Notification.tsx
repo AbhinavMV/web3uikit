@@ -1,7 +1,8 @@
 import { NotificationProps, notifyType } from './types';
 import { useEffect, useState } from 'react';
 import { getNotificationColor } from './themes/themes';
-import { Icon, TIconType } from '@web3uikit/icons';
+// import { Icon, TIconType } from '@web3uikit/icons';
+import { Ada, Cross } from '@web3uikit/icons';
 import NotificationStyles from './Notification.styles';
 import { color } from '@web3uikit/styles';
 
@@ -69,7 +70,8 @@ const Notification: React.FC<NotificationProps> = ({
         }, 400);
     };
 
-    const getIcon = (): TIconType => {
+    const getIcon = (): string => {
+        //Icon
         if (icon) return icon;
         if (type === 'error' || type === 'warning') {
             return 'exclamation';
@@ -95,7 +97,7 @@ const Notification: React.FC<NotificationProps> = ({
             {...props}
         >
             <IconWrapperStyled data-testid={'test-notification-icon-wrapper'}>
-                <Icon size={24} svg={getIcon()} fill={getIconColor(type)} />
+                <Ada size={24} fill={getIconColor(type)} />
             </IconWrapperStyled>
             <TextContentStyled>
                 <TitleStyled data-testid={'test-notification-title'}>
@@ -105,7 +107,7 @@ const Notification: React.FC<NotificationProps> = ({
                     onClick={closeNotification}
                     data-testid={'test-notification-x'}
                 >
-                    <Icon size={24} svg={'x'} fill={color.greyIcons} />
+                    <Cross size={24} fill={color.greyIcons} />
                 </CloseWrapperStyled>
                 <SpanStyled data-testid={'test-notification-message'}>
                     {message}

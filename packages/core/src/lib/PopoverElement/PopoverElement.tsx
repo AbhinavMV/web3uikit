@@ -1,6 +1,7 @@
 import { PopoverElementProps } from './types';
 import PopoverElementStyles from './PopoverElement.styles';
-import { Icon } from '@web3uikit/icons';
+import { Ada } from '@web3uikit/icons';
+// import { Icon } from '@web3uikit/icons';
 
 const { DivContainerStyled, DivStyled, DivImageStyled, TextStyled } =
     PopoverElementStyles;
@@ -40,7 +41,7 @@ const PopoverElement: React.FC<PopoverElementProps> = ({
             >
                 {icon ? (
                     <DivImageStyled>
-                        <Icon fill={iconColor} size={iconSize} svg={icon} />
+                        <Ada fill={iconColor} size={iconSize} />
                     </DivImageStyled>
                 ) : (
                     ''

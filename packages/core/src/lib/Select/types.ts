@@ -1,5 +1,5 @@
 import { RefObject } from 'react';
-import { TIconType } from '@web3uikit/icons';
+// import { TIconType } from '@web3uikit/icons';
 
 export interface SelectProps {
     /**
@@ -56,7 +56,7 @@ export interface SelectProps {
      * Icon name the should be displayed before the options
      */
 
-    prefixIcon?: TIconType;
+    prefixIcon?: string; //Icon
 
     /**
      * String that you want to display before the selected option

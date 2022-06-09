@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import Notification from './Notification';
 import { Button } from '../Button';
-import { TIconType } from '@web3uikit/icons';
+// import { TIconType } from '@web3uikit/icons';
 import NotificationProvider, { useNotification } from './NotificationProvider';
 import { IPosition, notifyType } from './types';
 
@@ -27,7 +27,7 @@ const HookTemplate: ComponentStory<typeof Notification> = () => {
 
     const handleNewNotification = (
         type: notifyType,
-        icon?: TIconType,
+        icon?: string, //Icon type
         position?: IPosition,
     ) => {
         dispatch({

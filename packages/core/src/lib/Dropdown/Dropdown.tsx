@@ -10,7 +10,13 @@ import {
 import { useState, useEffect } from 'react';
 import { IDropdown } from './types';
 import { Illustration } from '../Illustrations';
-import { Icon } from '@web3uikit/icons';
+import {
+    ChevronDown,
+    ChevronUp,
+    // Icon,
+    TriangleDown,
+    TriangleUp,
+} from '@web3uikit/icons';
 import { OptionProps } from '../Select';
 import { Typography } from '../Typography';
 
@@ -134,9 +140,9 @@ const Dropdown: React.FC<IDropdown> = ({
                 <div>
                     <span>
                         {icon && (
-                            <Icon
+                            <ChevronDown
                                 size={24}
-                                svg={icon}
+                                // svg={icon}
                                 style={{
                                     fill: 'currentColor',
                                 }}
@@ -156,21 +162,38 @@ const Dropdown: React.FC<IDropdown> = ({
                                 options[selectedIndex]?.label}
                         </Typography>
                     )}
-                    <Icon
-                        size={24}
-                        svg={
-                            dropdownArrowType === 'normal'
-                                ? isOpen
-                                    ? 'chevronUp'
-                                    : 'chevronDown'
-                                : isOpen
-                                ? 'triangleUp'
-                                : 'triangleDown'
-                        }
-                        style={{
-                            fill: 'currentColor',
-                        }}
-                    />
+
+                    {dropdownArrowType === 'normal' ? (
+                        isOpen ? (
+                            <ChevronUp
+                                size={24}
+                                style={{
+                                    fill: 'currentColor',
+                                }}
+                            />
+                        ) : (
+                            <ChevronDown
+                                size={24}
+                                style={{
+                                    fill: 'currentColor',
+                                }}
+                            />
+                        )
+                    ) : isOpen ? (
+                        <TriangleUp
+                            size={24}
+                            style={{
+                                fill: 'currentColor',
+                            }}
+                        />
+                    ) : (
+                        <TriangleDown
+                            size={24}
+                            style={{
+                                fill: 'currentColor',
+                            }}
+                        />
+                    )}
                 </div>
             </DivStyledSelected>
             <RenderOptions />

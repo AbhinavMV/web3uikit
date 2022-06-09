@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { color } from '@web3uikit/styles';
 import PopoverDropdown from './PopoverDropdown';
 import PopoverElement from '../PopoverElement/PopoverElement';
-import { Icon } from '@web3uikit/icons';
+import { HelpCircle } from '@web3uikit/icons';
 
 export default {
     title: '5.Popup/Popover Dropdown',
@@ -66,7 +66,7 @@ PopoverSelection.args = {
             onClick={() => alert('Local Devchain Server')}
         />,
     ],
-    parent: <Icon key="3" svg={'helpCircle'} fill={color.grey} size={50} />,
+    parent: <HelpCircle key="3" fill={color.grey} size={50} />,
 };
 
 export const PopoverCustomPosition = Template.bind({});
@@ -112,7 +112,7 @@ PopoverCustomPosition.args = {
             onClick={() => alert('Local Devchain Server')}
         />,
     ],
-    parent: <Icon key="3" svg={'helpCircle'} fill={color.grey} size={50} />,
+    parent: <HelpCircle key="3" fill={color.grey} size={50} />,
 };
 
 export const PopoverSelectionUser = Template.bind({});
@@ -157,5 +157,5 @@ PopoverSelectionUser.args = {
             onClick={() => alert('Logout')}
         />,
     ],
-    parent: <Icon key="7" svg={'helpCircle'} fill={color.grey} size={50} />,
+    parent: <HelpCircle key="7" fill={color.grey} size={50} />,
 };

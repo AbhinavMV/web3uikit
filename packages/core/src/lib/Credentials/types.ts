@@ -1,5 +1,5 @@
 import { color } from '@web3uikit/styles';
-import { TIconType } from '@web3uikit/icons';
+// import { TIconType } from '@web3uikit/icons';
 import { Typography } from '../Typography';
 
 export interface ICredentialsProps extends ICredentialsHeaderProps {
@@ -54,7 +54,7 @@ export interface ICredentialsHeaderProps {
     /**
      * header Icon
      */
-    icon?: TIconType;
+    icon?: string; //Icon
 
     /**
      * header Icon color

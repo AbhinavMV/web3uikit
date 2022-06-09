@@ -1,5 +1,10 @@
-import type { TIconType } from '@web3uikit/icons';
 import { ILoadingProps } from '../Loading';
+import { TIconProps } from '@web3uikit/icons';
+import React from 'react';
+
+interface IconComp extends TIconProps {
+    isIcon: boolean;
+}
 
 export interface ButtonProps {
     /**
@@ -55,7 +60,7 @@ export interface ButtonProps {
      * set an icon to show inside the button
      * import { iconTypes } from "../../components/Icon/collection"
      */
-    icon?: TIconType;
+    icon?: React.ReactSVGElement; //Icon
 
     /**
      * set an icon position, or maybe show only the icon
